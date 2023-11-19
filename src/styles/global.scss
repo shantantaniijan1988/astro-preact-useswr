@@ -1,0 +1,54 @@
+@use "colors" as *;
+@use "reset" as *;
+
+body {
+  color: $color-text;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  width: 768px;
+  max-width: 100%;
+  padding: 4rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem 0;
+}
+
+.label {
+  width: fit-content;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0 0.5rem;
+}
+
+.fetch-button {
+  width: fit-content;
+  margin-top: 1rem;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.data-display {
+  margin-top: 2rem;
+}
+
+.data-display__item {
+  + .data-display__item {
+    margin-top: 0.5rem;
+  }
+
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+
+  span::before {
+    content: "-";
+  }
+}
